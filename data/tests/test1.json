@@ -1,0 +1,24 @@
+{
+  "id": "1",
+  "title": "Java Basics",
+  "topic": "Programming",
+  "created_by": "1",
+  "questions": [
+    {
+      "id": "1",
+      "text": "What is Java?",
+      "answers": [
+        {
+          "id": "1",
+          "text": "Programming language",
+          "isCorrect": true
+        },
+        {
+          "id": "2",
+          "text": "Coffee",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
