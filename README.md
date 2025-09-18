@@ -43,7 +43,7 @@ Spring Security Crypto (BCrypt)
 
 Склонировать проект:
 
-git clone https://github.com/
+git clone https://github.com/kurochkin-web/ProjectOnServlets.git
 
 
 Собрать проект с помощью Maven:
