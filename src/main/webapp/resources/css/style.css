@@ -224,4 +224,31 @@ label {
 .box__link-registration:hover {color: var(--color-additionally);}
 .page__wrapper-registration {flex-direction: row-reverse;}
 
+.container-index {
+	max-width: 385px;
+	text-align: center;
+}
+
+.page__link {
+	color: var(--color-blue-text);
+	font-weight: 900;
+	text-transform: uppercase;
+	padding: 9px 23px;
+	background-color: var(--color-bcg);
+	border-radius: 20px;
+}
+
+.page__link:hover {
+	background-color: var(--color-blue-text);
+	color: var(--color-white);
+}
+
+.page__link:last-child {
+	margin-left: 14px;
+}
+
+.button-wrapper {
+	justify-content: center;
+	margin-top: 20px;
+}
 

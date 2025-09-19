@@ -3,6 +3,7 @@ package servlets;
 import entity.User;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,10 +13,13 @@ import services.UserService;
 
 import java.io.IOException;
 import java.util.Optional;
+import java.util.logging.Logger;
 
+@WebServlet(urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
 
     private UserService userService;
+    private static final Logger log = Logger.getLogger(LoginServlet.class.getName());
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -25,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/login").forward(req, resp);
+        req.getRequestDispatcher("/login.jsp").forward(req, resp);
     }
 
     @Override
@@ -37,9 +41,13 @@ public class LoginServlet extends HttpServlet {
         Optional<User> optionalUser = userService.findUserByCredentials(login, password);
 
         if (optionalUser.isPresent()){
-            resp.sendRedirect("/index");
+            log.info("Юзер найден");
+            req.getSession().setAttribute("user", optionalUser.get());
+            resp.sendRedirect(req.getContextPath() + "/secure/home");
         } else {
-            req.getRequestDispatcher("/login.html").forward(req, resp);
+            log.info("Юзер не найден");
+            req.setAttribute("errorMessage", "Неверный логин или пароль!");
+            req.getRequestDispatcher(req.getContextPath() + "/WEB-INF/login.jsp").forward(req, resp);
         }
     }
 }

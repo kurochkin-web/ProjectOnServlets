@@ -1,3 +1,6 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">>
 </head>
 <body>
     <main>
@@ -20,6 +23,22 @@
                         <h1 class="page__main-title">
                             Registration
                         </h1>
+
+                        <!-- Вывод ошибок -->
+                        <c:if test="${not empty errorMessage}">
+                            <p style="color: red; font-weight: bold;">
+                                ${errorMessage}
+                            </p>
+                        </c:if>
+
+                        <!-- Вывод успешного сообщения -->
+                        <c:if test="${not empty successMessage}">
+                            <p style="color: green; font-weight: bold;">
+                                ${successMessage}
+                            </p>
+                        </c:if>
+
+
                         <p class="page__text">
                             for the test service developed by Artem Kurochkin on behalf of Java Rush
                         </p>
@@ -41,7 +60,7 @@
                         </form>
                         <p class="login-box__support-text">
                            If you have an account, you can 
-                            <a href="login.html" class="box__link box__link-registration">log in</a>.
+                            <a href="login.jsp" class="box__link box__link-registration">log in</a>.
                         </p>
                     </div>
                 </div>

@@ -12,11 +12,13 @@ import services.UserService;
 
 import java.io.IOException;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 @WebServlet (urlPatterns = "/registration")
 public class RegistrationServlet extends HttpServlet {
 
     private UserService userService;
+    private static final Logger log = Logger.getLogger(LoginServlet.class.getName());
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -26,7 +28,7 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/registration").forward(req, resp);
+        req.getRequestDispatcher("/registration.jsp").forward(req, resp);
     }
 
     @Override
@@ -35,7 +37,11 @@ public class RegistrationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
+
+        log.info("Получен логин: " + login);
+        log.info("Получен пароль: " + password);
+
         userService.save(login, password);
-        resp.sendRedirect("/login");
+        resp.sendRedirect(req.getContextPath() + "/login");
     }
 }
