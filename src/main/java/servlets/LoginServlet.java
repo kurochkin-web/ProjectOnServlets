@@ -46,8 +46,8 @@ public class LoginServlet extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/secure/home");
         } else {
             log.info("Юзер не найден");
-            req.setAttribute("errorMessage", "Неверный логин или пароль!");
-            req.getRequestDispatcher(req.getContextPath() + "/WEB-INF/login.jsp").forward(req, resp);
+            req.setAttribute("errorMessage", "Incorrect login or password");
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
     }
 }

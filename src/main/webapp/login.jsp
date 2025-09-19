@@ -32,11 +32,11 @@
                             Log in
                         </h2>
 
-                        <!-- Сообщение об ошибке -->
+                        <!-- Error massage -->
                         <c:if test="${not empty errorMessage}">
-                            <p style="color: red; font-weight: bold; margin-bottom: 10px;">
+                            <span class="errorMessage">
                                 ${errorMessage}
-                            </p>
+                            </span>
                         </c:if>
 
                         <form action="${pageContext.request.contextPath}/login" method="post" class="form">
