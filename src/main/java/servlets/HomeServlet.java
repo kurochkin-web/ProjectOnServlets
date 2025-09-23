@@ -1,5 +1,6 @@
 package servlets;
 
+import entity.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,11 +13,14 @@ import java.io.IOException;
 public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/secure/home.jsp").forward(req, resp);
+
+        User user = (User) req.getSession().getAttribute("user");
+
+        req.getRequestDispatcher("/secure/home.html").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+
     }
 }
