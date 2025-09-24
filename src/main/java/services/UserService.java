@@ -1,6 +1,7 @@
 package services;
 
 import dao.UserDao;
+import entity.Role;
 import entity.User;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ public class UserService {
                 .id(UUID.randomUUID())
                 .login(login)
                 .password(encodePassword)
+                .role(Role.USER)
                 .build();
 
         userDao.save(user);

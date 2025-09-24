@@ -18,8 +18,8 @@ public class ContextListener implements ServletContextListener {
         ServletContext servletContext = sce.getServletContext();
 
         ObjectMapper objectMapper = new ObjectMapper();
-        File file = new File("C:\\Users\\User\\IdeaProjects\\ProjectOnServlets\\src\\main\\resources\\users.json");
-        UserDao userDao = new UserDao(objectMapper, file);
+        File fileUsers = new File("C:\\Users\\User\\IdeaProjects\\ProjectOnServlets\\data\\users\\users.json");
+        UserDao userDao = new UserDao(objectMapper, fileUsers);
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
         UserService userService = new UserService(userDao, passwordEncoder);

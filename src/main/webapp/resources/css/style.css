@@ -285,7 +285,43 @@ header {padding: 53px 0 83px;}
 .header-hamburger__list {
 	position: absolute;
 	right: 0;
+	padding-top: 12px;
 }
 .header-hamburger__item {
-	padding: 7px;
+	margin-bottom: 7px;
 }
+
+.header-hamburger__link {
+	color: var(--color-additionally);
+}
+.header-hamburger__link:hover {
+	color: var(--color-blue-text);
+}
+
+
+.home-page__title-wrapper {margin-bottom: 58px;}
+.content-wrapper__topic-title {
+	justify-content: space-between;
+	width: fit-content;
+	gap: 8px;
+	align-items: center;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.topic__arrow {font-weight: 700;}
+.topic__text {max-width: 680px;}
+
+.topic__list,
+.topic__text {padding: 0 0 20px 20px;}
+.topic__item {margin-bottom: 10px;}
+
+.topic__link {
+	font-weight: 900;
+	color: var(--color-additionally);
+	font-size: 20px;
+}
+
+.topic__link:hover {
+	color: var(--color-grey);
+}
+
