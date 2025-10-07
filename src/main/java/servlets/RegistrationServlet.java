@@ -11,6 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import services.UserService;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.logging.Logger;
 
@@ -41,7 +42,16 @@ public class RegistrationServlet extends HttpServlet {
         log.info("Получен логин: " + login);
         log.info("Получен пароль: " + password);
 
-        userService.save(login, password);
-        resp.sendRedirect(req.getContextPath() + "/login");
+        Optional<User> optionalUser = userService.findUserByCredentials(login, password);
+
+        if(optionalUser.isPresent()) {
+            req.setAttribute("errorMessage", "This user is already registered.");
+            req.getRequestDispatcher("/registration.jsp").forward(req, resp);
+        } else {
+            userService.save(login, password);
+            resp.sendRedirect(req.getContextPath() + "/login");
+        }
+
+
     }
 }

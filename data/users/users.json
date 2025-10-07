@@ -1,8 +1,8 @@
-[
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "hashed_password",
-      "role": "ADMIN"
-    }
-  ]
+[{"id":"861cdf86-65e2-417a-bc8f-5025df339b11",
+  "login":"qwerty",
+  "password":"$2a$10$XAgpK7CTezbgqn3b5P4pDecXtkRa4kNRE2VIJdJ.ymIXMm1Ni4Vym",
+  "role":"USER"},
+  {"id":"65f352d4-ff1d-4f97-8f75-315f47c99c65",
+    "login":"qwerty",
+    "password":"$2a$10$rdJ2O2FV7l7C/rxMN6XUcOqhkseSstcdt4OQWHjgg2LyRiQIryBTK",
+    "role":"USER"}]

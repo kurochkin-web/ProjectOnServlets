@@ -6,16 +6,19 @@ import entity.User;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import servlets.LoginServlet;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 @RequiredArgsConstructor
 public class UserService {
 
     private final UserDao userDao;
     private final BCryptPasswordEncoder passwordEncoder;
+    private static final Logger log = Logger.getLogger(LoginServlet.class.getName());
 
     public void save(String login, String password) {
 
@@ -26,7 +29,7 @@ public class UserService {
                 .password(encodePassword)
                 .role(Role.USER)
                 .build();
-
+        log.info("Юзер создан" + user.getId());
         userDao.save(user);
 
         //Энкодим пароль, создаем юзера и через UserDao сохраняем

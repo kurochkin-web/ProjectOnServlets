@@ -23,22 +23,6 @@
                         <h1 class="page__main-title">
                             Registration
                         </h1>
-
-                        <!-- Вывод ошибок -->
-                        <c:if test="${not empty errorMessage}">
-                            <p style="color: red; font-weight: bold;">
-                                ${errorMessage}
-                            </p>
-                        </c:if>
-
-                        <!-- Вывод успешного сообщения -->
-                        <c:if test="${not empty successMessage}">
-                            <p style="color: green; font-weight: bold;">
-                                ${successMessage}
-                            </p>
-                        </c:if>
-
-
                         <p class="page__text">
                             for the test service developed by Artem Kurochkin on behalf of Java Rush
                         </p>
@@ -47,6 +31,14 @@
                         <h2 class="form__title form__title-registation">
                             Registration
                         </h2>
+
+                         <!-- Error massage -->
+                        <c:if test="${not empty errorMessage}">
+                            <span class="errorMessage">
+                                ${errorMessage}
+                            </span>
+                        </c:if>
+
                         <form action="registration" method="post" class="form">
                             <div class="form__group">
                                 <input type="text" name="login" required class="form__input form__input-registration">

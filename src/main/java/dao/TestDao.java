@@ -15,7 +15,7 @@ public class TestDao {
     private final ObjectMapper objectMapper;
     private final File testDirectory;
 
-    public List<Test> findAll() {
+    public void findAll() {
         creatingDirectory();
     }
 
