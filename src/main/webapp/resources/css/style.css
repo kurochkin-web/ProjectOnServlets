@@ -201,7 +201,7 @@ label {
     padding: 9px 0;
     border-radius: 11px;
     cursor: pointer;
-	text-transform: lowercase;
+	text-transform: uppercase;
 }
 
 .login-btn {

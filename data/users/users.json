@@ -1,8 +1,1 @@
-[{"id":"861cdf86-65e2-417a-bc8f-5025df339b11",
-  "login":"qwerty",
-  "password":"$2a$10$XAgpK7CTezbgqn3b5P4pDecXtkRa4kNRE2VIJdJ.ymIXMm1Ni4Vym",
-  "role":"USER"},
-  {"id":"65f352d4-ff1d-4f97-8f75-315f47c99c65",
-    "login":"qwerty",
-    "password":"$2a$10$rdJ2O2FV7l7C/rxMN6XUcOqhkseSstcdt4OQWHjgg2LyRiQIryBTK",
-    "role":"USER"}]
+[{"id":"861cdf86-65e2-417a-bc8f-5025df339b11","login":"qwerty","password":"$2a$10$XAgpK7CTezbgqn3b5P4pDecXtkRa4kNRE2VIJdJ.ymIXMm1Ni4Vym","role":"USER"},{"id":"65f352d4-ff1d-4f97-8f75-315f47c99c65","login":"qwerty","password":"$2a$10$rdJ2O2FV7l7C/rxMN6XUcOqhkseSstcdt4OQWHjgg2LyRiQIryBTK","role":"USER"},{"id":"b30fbf94-4045-4289-9b1a-f733b692f0b4","login":"123","password":"$2a$10$dG5.iF9SYZz1dCwWeuZdKOkPcSppvklsS6bYIKtuZolZnAYE86BH2","role":"USER"}]

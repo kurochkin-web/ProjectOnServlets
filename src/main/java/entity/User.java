@@ -16,5 +16,11 @@ public class User {
     private UUID id;
     private String login;
     private String password;
-    private Role role;
+    private Role role = Role.USER;
+    private List<UUID> testsId;
+
+
+    public boolean isAdmin() {
+        return Role.ADMIN.equals(role);
+    }
 }

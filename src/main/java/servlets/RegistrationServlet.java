@@ -38,10 +38,6 @@ public class RegistrationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-
-        log.info("Получен логин: " + login);
-        log.info("Получен пароль: " + password);
-
         Optional<User> optionalUser = userService.findUserByCredentials(login, password);
 
         if(optionalUser.isPresent()) {
