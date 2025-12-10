@@ -1,5 +1,15 @@
-{
+[{
   "id": "1",
   "name": "Topic1",
-  "description": "Lorem ipsum",
-}
+  "description": "Lorem ipsum"
+},
+  {
+    "id": "2",
+    "name": "Topic1",
+    "description": "Lorem ipsum"
+  },
+  {
+    "id": "3",
+    "name": "Topic1",
+    "description": "Lorem ipsum"
+  }]

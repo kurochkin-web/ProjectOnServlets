@@ -11,7 +11,7 @@ import java.util.UUID;
 public class TestService {
     TestDao testDao;
 
-    public List<Test> findListTestsByID(List<UUID> list) {
+    /*public List<Test> findListTestsByID(List<UUID> list) {
 
         List<Test> tests = list.stream()
                 .map(id -> testDao.findById(id))
@@ -20,7 +20,7 @@ public class TestService {
                 .toList();
 
         return tests;
-    }
+    }*/
 }
 
 

@@ -36,11 +36,13 @@ public class UserService {
     }
 
     public Optional<User> findUserByCredentials(String login, String password) {
+        //Возвращает Юзера по логину и паролю
+
         List<User> users = userDao.findAll();
 
         return users.stream()
                 .filter(user -> user.getLogin().equals(login))
-                .filter(user -> passwordEncoder.matches(password, user.getPassword()))
+                .filter(user -> passwordEncoder.matches(password, user.getPassword())) //сравнил введенный с полученным
                 .findFirst();
 
         //Получаем в users всех юзеров в json'е

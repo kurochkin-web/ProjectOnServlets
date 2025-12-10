@@ -41,8 +41,8 @@ public class RegistrationServlet extends HttpServlet {
         Optional<User> optionalUser = userService.findUserByCredentials(login, password);
 
         if(optionalUser.isPresent()) {
-            req.setAttribute("errorMessage", "This user is already registered.");
-            req.getRequestDispatcher("/registration.jsp").forward(req, resp);
+            req.setAttribute("errorMessage", "This user is already registered."); //Добавили атрибут в ответ
+            req.getRequestDispatcher("/registration.jsp").forward(req, resp); //Перезапускаем
         } else {
             userService.save(login, password);
             resp.sendRedirect(req.getContextPath() + "/login");

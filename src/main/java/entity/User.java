@@ -20,7 +20,8 @@ public class User {
     private List<UUID> testsId;
 
 
-    public boolean isAdmin() {
+    public boolean checkedRoleAdmin() {
+
         return Role.ADMIN.equals(role);
     }
 }
