@@ -1,5 +1,6 @@
 package servlets;
 
+import entity.Category;
 import entity.Test;
 import entity.User;
 import jakarta.servlet.ServletConfig;
@@ -29,8 +30,9 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
-        req.getRequestDispatcher("/secure/home.html").forward(req, resp);
+        List<Category> categories = categoryService.getAllCategories();
+        req.setAttribute("categories", categories);
+        req.getRequestDispatcher("/secure/home.jsp").forward(req, resp);
     }
 
     @Override

@@ -14,7 +14,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class TestDao {
 
-    private final ObjectMapper objectMapper;
+    /*private final ObjectMapper objectMapper;
     private final File testDirectory;
 
     @SneakyThrows
@@ -35,5 +35,5 @@ public class TestDao {
     }
 
 
-
+*/
 }

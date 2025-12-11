@@ -13,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Category {
-    private UUID id;
+    private Integer id;
     private String name;
     private String description;
 }

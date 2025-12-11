@@ -1,3 +1,6 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,28 +52,40 @@
                         Select a category
                     </p>
                 </div>
-                <div class="home-page__content-wrapper">
-                    <div class="content-wrapper__topic-title d-flex">
-                        <h3 class="topic__name">
-                            Category 1
-                        </h3>
-                        <span class="topic__arrow">&xvee;</span>
+
+                <c:choose>
+                <c:when test="${not empty categories}">
+                    <div class="categories-list">
+                        <c:forEach var="category" items="${categories}">
+
+                            <div class="home-page__content-wrapper">
+                                <div class="content-wrapper__topic-title d-flex">
+                                    <h3 class="topic__name">
+                                        ${category.name}
+                                    </h3>
+                                    <span class="topic__arrow">&xvee;</span>
+                                </div>
+                                <p class="page__text topic__text">
+                                    ${category.description}
+                                </p>
+                                <ul class="topic__list">
+                                    <li class="topic__item">
+                                        <a href="#" class="topic__link">Test 1</a>
+                                    </li>
+                                    <li class="topic__item">
+                                        <a href="#" class="topic__link">Test 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </c:forEach>
                     </div>
-                    <p class="page__text topic__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Sed vestibulum nulla sit amet ultricies pellentesque. 
-                        Nullam quis convallis eros. 
-                        Ut lorem felis, ornare a ipsum vel, mattis accumsan lacus.
-                    </p>
-                    <ul class="topic__list">
-                        <li class="topic__item">
-                            <a href="#" class="topic__link">Test 1</a>
-                        </li>
-                        <li class="topic__item">
-                            <a href="#" class="topic__link">Test 2</a>
-                        </li>
-                    </ul>
-                </div>
+                </c:when>
+                <c:otherwise>
+                    <p>Категории не найдены</p>
+                </c:otherwise>
+                </c:choose>
+
+
             </div>
         </section>
     </main>
