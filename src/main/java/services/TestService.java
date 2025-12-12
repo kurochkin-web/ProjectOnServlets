@@ -6,10 +6,15 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 public class TestService {
-    TestDao testDao;
+    private final TestDao testDao;
+
+    public List<Test> getAllTests() {
+        return testDao.findAll();
+    }
 
     /*public List<Test> findListTestsByID(List<UUID> list) {
 

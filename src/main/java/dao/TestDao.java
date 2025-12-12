@@ -1,5 +1,6 @@
 package dao;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entity.Test;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,13 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class TestDao {
 
+    private final ObjectMapper objectMapper;
+    private final File file;
+
+    @SneakyThrows
+    public List<Test> findAll() {
+        return objectMapper.readValue(file, new TypeReference<List<Test>>() {});
+    }
     /*private final ObjectMapper objectMapper;
     private final File testDirectory;
 

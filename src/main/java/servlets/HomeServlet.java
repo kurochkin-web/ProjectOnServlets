@@ -20,18 +20,22 @@ import java.util.List;
 public class HomeServlet extends HttpServlet {
 
     private CategoryService categoryService;
+    private TestService testService;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         categoryService = (CategoryService) config.getServletContext().getAttribute("categoryService");
+        testService = (TestService) config.getServletContext().getAttribute("testService");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         List<Category> categories = categoryService.getAllCategories();
+        List<Test> tests = testService.getAllTests();
         req.setAttribute("categories", categories);
+        req.setAttribute("tests", tests);
         req.getRequestDispatcher("/secure/home.jsp").forward(req, resp);
     }
 

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "categoryId": 1,
+    "name": "Основы Java",
+    "description": "Тест по базовым темам Java",
+    "questions": [
+      {
+        "id": 101,
+        "text": "Что делает JVM?",
+        "answers": [
+          { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
+          { "id": 2, "text": "Компилирует Java в машинный код", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 102,
+        "text": "Что такое JDK?",
+        "answers": [
+          { "id": 1, "text": "Java Development Kit", "isCorrect": true },
+          { "id": 2, "text": "Java Deployment Kit", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "categoryId": 1,
+    "name": "Основы Java",
+    "description": "Тест по базовым темам Java",
+    "questions": [
+      {
+        "id": 101,
+        "text": "Что делает JVM?",
+        "answers": [
+          { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
+          { "id": 2, "text": "Компилирует Java в машинный код", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 102,
+        "text": "Что такое JDK?",
+        "answers": [
+          { "id": 1, "text": "Java Development Kit", "isCorrect": true },
+          { "id": 2, "text": "Java Deployment Kit", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "categoryId": 2,
+    "name": "Основы Java",
+    "description": "Тест по базовым темам Java",
+    "questions": [
+      {
+        "id": 101,
+        "text": "Что делает JVM?",
+        "answers": [
+          { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
+          { "id": 2, "text": "Компилирует Java в машинный код", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 102,
+        "text": "Что такое JDK?",
+        "answers": [
+          { "id": 1, "text": "Java Development Kit", "isCorrect": true },
+          { "id": 2, "text": "Java Deployment Kit", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

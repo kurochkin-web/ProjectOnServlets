@@ -15,9 +15,9 @@ import java.util.UUID;
 public class Test {
     private UUID id;
     private String title;
-    private String topic;
-    private List<UUID> questionId;
-    private List<UUID> usersId;
+    private Integer categoryId;
+    private String description;
+    private List<Question> questionList;
 }
 
 //многие ко многим - связь делается отдельной таблицей где есть 2 колонки userid и testid
