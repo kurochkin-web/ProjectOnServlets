@@ -13,8 +13,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Test {
-    private UUID id;
-    private String title;
+    private Integer id;
+    private String name;
     private Integer categoryId;
     private String description;
     private List<Question> questionList;

@@ -59,23 +59,31 @@
                         <c:forEach var="category" items="${categories}">
 
                             <div class="home-page__content-wrapper">
-                                <div class="content-wrapper__topic-title d-flex">
+
+                                 <!-- Заголовок -->
+                                <div class="content-wrapper__topic-title d-flex accordion-header">
                                     <h3 class="topic__name">
                                         ${category.name}
                                     </h3>
-                                    <span class="topic__arrow">&xvee;</span>
+                                    <span class="topic__arrow">&#5125;</span>
                                 </div>
-                                <p class="page__text topic__text">
-                                    ${category.description}
-                                </p>
-                                <ul class="topic__list">
-                                    <li class="topic__item">
-                                        <a href="#" class="topic__link">Test 1</a>
-                                    </li>
-                                    <li class="topic__item">
-                                        <a href="#" class="topic__link">Test 2</a>
-                                    </li>
-                                </ul>
+
+                                <!-- Контент (по умолчанию скрыт) -->
+                                <div class="accordion-content">
+                                    <p class="page__text topic__text">
+                                        ${category.description}
+                                    </p>
+                                    
+                                    <ul class="topic__list">
+                                        <c:forEach var="test" items="${tests}">
+                                            <c:if test="${test.categoryId == category.id}">
+                                                <li class="topic__item">
+                                                    <a href="#" class="topic__link">${test.name}</a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
+                                    </ul>
+                                </div>
                             </div>
                         </c:forEach>
                     </div>
@@ -90,4 +98,5 @@
         </section>
     </main>
 </body>
+<script src="${pageContext.request.contextPath}/js/home.js"></script>
 </html>

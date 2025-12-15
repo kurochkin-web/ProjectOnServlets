@@ -4,7 +4,7 @@
     "categoryId": 1,
     "name": "Основы Java",
     "description": "Тест по базовым темам Java",
-    "questions": [
+    "questionList": [
       {
         "id": 101,
         "text": "Что делает JVM?",
@@ -26,11 +26,11 @@
   {
     "id": 2,
     "categoryId": 1,
-    "name": "Основы Java",
+    "name": "JRE",
     "description": "Тест по базовым темам Java",
-    "questions": [
+    "questionList": [
       {
-        "id": 101,
+        "id": 103,
         "text": "Что делает JVM?",
         "answers": [
           { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
@@ -50,11 +50,11 @@
   {
     "id": 3,
     "categoryId": 2,
-    "name": "Основы Java",
+    "name": "Основы Конституционного права",
     "description": "Тест по базовым темам Java",
-    "questions": [
+    "questionList": [
       {
-        "id": 101,
+        "id": 106,
         "text": "Что делает JVM?",
         "answers": [
           { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
@@ -63,6 +63,54 @@
       },
       {
         "id": 102,
+        "text": "Что такое JDK?",
+        "answers": [
+          { "id": 1, "text": "Java Development Kit", "isCorrect": true },
+          { "id": 2, "text": "Java Deployment Kit", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "categoryId": 3,
+    "name": "Крамола",
+    "description": "Тест по базовым темам Java",
+    "questionList": [
+      {
+        "id": 1021,
+        "text": "Что делает JVM?",
+        "answers": [
+          { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
+          { "id": 2, "text": "Компилирует Java в машинный код", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 104,
+        "text": "Что такое JDK?",
+        "answers": [
+          { "id": 1, "text": "Java Development Kit", "isCorrect": true },
+          { "id": 2, "text": "Java Deployment Kit", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "categoryId": 4,
+    "name": "Хрень",
+    "description": "Тест по базовым темам Java",
+    "questionList": [
+      {
+        "id": 1021,
+        "text": "Что делает JVM?",
+        "answers": [
+          { "id": 1, "text": "Выполняет байт-код", "isCorrect": true },
+          { "id": 2, "text": "Компилирует Java в машинный код", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 104,
         "text": "Что такое JDK?",
         "answers": [
           { "id": 1, "text": "Java Development Kit", "isCorrect": true },

@@ -13,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Question {
-    private UUID id;
+    private Integer id;
     private String text;
     private List<Answer> answers;
 }
