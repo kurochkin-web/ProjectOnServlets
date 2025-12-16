@@ -98,5 +98,40 @@
         </section>
     </main>
 </body>
-<script src="${pageContext.request.contextPath}/js/home.js"></script>
+<script type="text/javascript">
+
+    const accordionItems = document.querySelectorAll('.home-page__content-wrapper');
+
+    if (accordionItems.length > 0) {
+        const firstItem = accordionItems[0];
+        const firstContent = firstItem.querySelector('.accordion-content');
+
+        firstItem.classList.add('active');
+        firstContent.style.height = firstContent.scrollHeight + 'px';
+    }
+
+    accordionItems.forEach(item => {
+
+    const content = item.querySelector('.accordion-content');
+
+    item.addEventListener('click', () => {
+
+    const isActive = item.classList.contains('active');
+
+    // закрываем все
+    accordionItems.forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.accordion-content').style.height = '0px';
+    });
+
+    // если кликнули не по активному — открываем
+    if (!isActive) {
+      item.classList.add('active');
+      content.style.height = content.scrollHeight + 'px';
+    }
+
+  });
+});
+
+</script>
 </html>

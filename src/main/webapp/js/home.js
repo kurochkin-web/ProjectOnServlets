@@ -1,23 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*'use strict'*/
 
-    const items = document.querySelectorAll(".home-page__content-wrapper");
+const accordionItems = document.querySelectorAll('.home-page__content-wrapper'),
+      accordionArrow = document.querySelectorAll('.accordion-content');
 
-    items.forEach(item => {
-        const header = item.querySelector(".accordion-header");
+  accordionItems.forEach(function(item, n) {
 
-        header.addEventListener("click", () => {
+    item.addEventListener('click', function() {
 
-            // если кликнули уже открытую — просто закроем
-            const isActive = item.classList.contains("active");
-
-            // закрываем все
-            items.forEach(i => i.classList.remove("active"));
-
-            // если была закрыта — открываем
-            if (!isActive) {
-                item.classList.add("active");
-            }
-        });
+      if(!item.parentNode.classList.contains('active')){
+        for (let i = 0; i < accordionItems.length; i++) {
+          accordionItems[i].parentNode.classList.remove('active');
+        };
+        item.parentNode.classList.add('active');
+      };
     });
-
-});
+  });

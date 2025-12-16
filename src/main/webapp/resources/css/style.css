@@ -328,4 +328,13 @@ header {padding: 53px 0 83px;}
 	color: var(--color-blue-text);
 }
 
+/* .home-page__content-wrapper.active .accordion-content {
+	height: 100%;
+} */
+
+.accordion-content {
+	height: 0;
+	overflow: hidden;
+	transition: .3s all ease-out;
+}
 
