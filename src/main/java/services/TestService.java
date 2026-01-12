@@ -16,6 +16,18 @@ public class TestService {
         return testDao.findAll();
     }
 
+    public Test getTestById (Integer id) {
+        List<Test> listTests = testDao.findAll();
+
+        Test result;
+        result = listTests.stream()
+                .filter(test -> test.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+
+        return result;
+    }
+
     /*public List<Test> findListTestsByID(List<UUID> list) {
 
         List<Test> tests = list.stream()

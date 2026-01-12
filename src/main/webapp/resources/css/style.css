@@ -225,6 +225,18 @@ label {
     color: var(--color-bcg);
 }
 
+.start-btn {
+	background-color: var(--color-additionally);
+	color: var(--color-white);
+	width: 247px;
+	margin-top: 36px;
+}
+
+.start-btn:hover {
+	background-color: var(--color-grey);
+	
+}
+
 .box__link {
 	font-weight: 900;
 	color: var(--color-blue-text);
@@ -308,10 +320,8 @@ header {padding: 53px 0 83px;}
 	margin-bottom: 10px;
 	cursor: pointer;
 }
-.topic__arrow {
-	font-weight: 700;
-	transform: rotate(90deg);
-}
+.topic__arrow {transform: rotate(90deg);}
+.home-page__content-wrapper.active .topic__arrow {transform: rotate(270deg);}
 .topic__text {max-width: 680px;}
 
 .topic__list,

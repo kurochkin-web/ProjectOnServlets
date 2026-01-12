@@ -78,7 +78,7 @@
                                         <c:forEach var="test" items="${tests}">
                                             <c:if test="${test.categoryId == category.id}">
                                                 <li class="topic__item">
-                                                    <a href="#" class="topic__link">${test.name}</a>
+                                                    <a href="${pageContext.request.contextPath}/secure/test?id=${test.id}" class="topic__link">${test.name}</a>
                                                 </li>
                                             </c:if>
                                         </c:forEach>

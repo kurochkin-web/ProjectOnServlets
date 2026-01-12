@@ -22,6 +22,7 @@ public class TestDao {
     public List<Test> findAll() {
         return objectMapper.readValue(file, new TypeReference<List<Test>>() {});
     }
+
     /*private final ObjectMapper objectMapper;
     private final File testDirectory;
 
